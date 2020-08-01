@@ -1,5 +1,5 @@
-#Repository for learning about Time Series Anomaly Detection.
+# Repository for learning about Time Series Anomaly Detection.
 
 ___
 
-gluonts
+solbox/ : Time Series Anomaly Detection Research resource during July 2020 at Solbox Inc. 
