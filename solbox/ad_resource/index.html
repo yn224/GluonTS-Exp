@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Anomaly Detection Study Sources</title>
+    <link rel="stylesheet" type="text/css" href="styles/page_style.css">
+    <script src="scripts/lang.js"></script>
+  </head>
+
+  <body>
+    <h1>Anomaly Detection Documentation for July 2020 Solbox Inc. Intern</h1>
+
+    <!--https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="alg.html">Algorithms</a>
+
+      <!--
+      <div class="dropdown">
+        <button class="dropbtn">Statistical Models
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="sarima.html">SARIMA</a>
+          <a href="kf.html">Kalman Filter</a>
+        </div>
+      </div>
+      -->
+
+      <a href="other_alg.html">Other Algorithms</a>
+
+      <!--
+      <div class="dropdown">
+        <button class="dropbtn">Other Algorithms
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+	        <a href="#">A1</a>
+	        <a href="#">A2</a>
+	      </div>
+      </div>
+      -->
+
+      <a href="papers.html">Papers</a>
+      <a href="ppt.html">Presentation</a>
+    </div>
+    
+    <!-- https://stackoverflow.com/questions/46008760/how-to-build-multiple-language-website-using-pure-html-js-jquery -->
+    <!-- https://stackoverflow.com/questions/41897313/how-to-toggle-between-two-html-pages-by-clicking-on-links -->
+    <!-- https://www.codecademy.com/forum_questions/55ad460dd3292f1a8200050c -->
+
+    <h2>Introduction</h2>
+    <p>
+    I was given a task to look through different anomaly detection algorithms that could potentially be implemented later in real-world setting. Throughout my internship period, I managed to learn about various algorithms and pros and cons of them with respect to others. The algorithms range from those that have statistical background to Neural Networks. Main source of knowledge was through number of papers dedicated to the introduction and analysis of such algorithms.
+    </p>
+
+    <h3>Starting Point</h3>
+    <p>
+    I believe <a href="https://github.com/yzhao062/anomaly-detection-resources">this Github repository</a> contains enough learning resources for anyone trying to learn outlier (anomaly) detection methods. Though the time series anomaly detection is not the focus, the content still contains some information regarding anomaly detection in time series data.
+    </p>
+
+    <h3>Other Resources</h3>
+
+    <table>
+      <tr>
+        <td>Working with Time Series (Python) - by Jake VanderPlas</td>
+        <td><a href="https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html">Link</a></td>
+      </tr>
+
+      <tr>
+        <td>How to Identify and Remove Seasonality from Time Series Data with Python</td>
+        <td><a href="https://machinelearningmastery.com/time-series-seasonality-with-python/">Link</a></td>
+      </tr>
+
+      <tr>
+        <td>실전 이탈 예측 모델링을 위한 세가지 고려사항</td>
+        <td><a href="https://danbi-ncsoft.github.io/works/2019/02/07/churn_prediction_in_practice-1.html">Link</a></td>
+      </tr>
+
+      <tr>
+        <td>
+	      Forecasting: Principles and Practice - by Rob J Hyndman and George Athanasopoulos (Monash University, Australia)
+	      <br>
+  	    예측기법의 기초와 연습 - ARIMA를 주 예제로 삼음
+	      </td>
+	      <td>
+	      <a href="https://otexts.com/fppkr/">한글판</a>
+	   <br>
+	  <a href="https://otexts.com/fpp2/">영어판</a>
+	</td>
+      </tr>
+
+      <tr>
+        <td>
+	  How to Decompose Time Series Data into Trend and Seasonality
+	  <br>
+	  시계열 분석
+	</td>
+	<td>
+	  <a href="https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/">Seasonal Decomposition</a> in Python
+	</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Basic idea of Anomaly Detection</td>
+	<td>이상감지 – Anomaly Detection: 
+		<br>
+	    <a href="https://intothedata.com/02.scholar_category/anomaly_detection/">Link</a>
+	</td>
+      </tr>
+      <tr>
+        <td>Anomaly Detection 개요：이상치 탐지 분야에 대한 소개 및 주요 문제와 핵심 용어, 산업 현장 적용 사례 정리<br>
+	    <a href="https://hoya012.github.io/blog/anomaly-detection-overview-1/">Link</a>
+	</td>
+      </tr>
+    </table>
+
+		<h3>Frequently Appearing Concepts</h3>
+		<table>
+		  <tr>
+		    <th>Concept</th>
+		    <th>Definition</th>
+		  </tr>
+
+		  <tr>
+			  <td>NAB Dataset <br> (<a href="https://github.com/numenta/NAB">Github Link</a>)</td>
+		    <td>The Numanta Anomaly Benchmark (NAB) is an open-source environment specifically designed to evaluate anomaly detection algorithms for real-world use.</td>
+		  </tr>
+
+		  <tr>
+		    <td>Performance Measures <br> (Precision, Recall, F1 Score)</td>
+		    <td>
+		      KR: <a href="https://nittaku.tistory.com/295">Link</a> or <a href="https://m.blog.naver.com/PostView.nhn?blogId=2feelus&logNo=221266173496&proxyReferer=https:%2F%2Fwww.google.com%2F">Link</a>
+		      <br>
+		      EN: <a href="https://blog.exsilio.com/all/accuracy-precision-recall-f1-score-interpretation-of-performance-measures/">Link</a>
+		    </td>
+		  </tr>
+
+		  <tr>
+		    <td>MAE, MAPE
+		    </td>
+		    <td>
+		      <a href="https://blog.naver.com/PostView.nhn?blogId=heygun&logNo=221516529668&parentCategoryNo=&categoryNo=56&viewDate=&isShowPopularPosts=true&from=search">MAE</a>(KR)
+		      <br>
+		      <a href="https://m.blog.naver.com/PostView.nhn?blogId=limitsinx&logNo=221578145366&proxyReferer=https:%2F%2Fwww.google.com%2F">MAPE</a>(KR)
+		    </td>
+		  </tr>
+		</table>
+
+		<p></p>
+	</body>
+</html>

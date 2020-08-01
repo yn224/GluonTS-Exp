@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<title>Anomaly Detection Study Sources</title>
+		<link rel="stylesheet" type="text/css" href="styles/page_style.css">
+	</head>
+
+	<body>
+		<h1>Anomaly Detection Documentation for July 2020 Solbox Inc. Intern</h1>
+		
+		<!--https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
+		<div class="navbar">
+		  <a href="index.html">Home</a>
+		  <a href="alg.html">Algorithms</a>
+
+		  <!--
+		  <div class="dropdown">
+		    <button class="dropbtn">Statistical Models
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div class="dropdown-content">
+		      <a href="sarima.html">SARIMA</a>
+		      <a href="kf.html">Kalman Filter</a>
+		    </div>
+		  </div>
+		  -->
+
+		  <a href="other_alg.html">Other Algorithms</a>
+
+		  <!--
+		  <div class="dropdown">
+		    <button class="dropbtn">Other Algorithms
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+
+		    <div class="dropdown-content">
+			    <a href="#">A1</a>
+			    <a href="#">A2</a>
+		    </div>
+		  </div>
+		  -->
+
+		  <a href="papers.html">Papers</a>
+		  <a href="ppt.html">Presentation</a>
+
+		</div>
+		
+		<div class="row">
+		<div class="column">
+		<h2>Other Algorithms that can be used for Anomaly Detection</h2>
+		
+		<h3>Time Series of Price Anomaly Detection</h3>
+		<p>
+		<a href="https://towardsdatascience.com/time-series-of-price-anomaly-detection-13586cd5ff46">This article</a> experiments with variety of algorithms for time series data.<br> 
+		Algorithms used: k-means, isolation forest, support vector machine, Gaussian distribution.
+		</p>
+	
+		<h3>Seldon/alibi-detect <em>(Not really well-documented)</em></h3>
+		<p>From its Github documentation: "<a href="https://github.com/SeldonIO/alibi-detect">alibi-detect</a> is an open source Python library focused on outlier, adversarial and concept drift detection. The package aims to cover both online and offline detectors for tabular data, images and time series. The outlier detection methods should allow the user to identify global, contextual and collective outliers."
+		</p>
+		
+		<h3>Algorithm-specific Resources</h3>
+		<table class="alg_table">
+		  <tr>
+		    <th rowspan="3">Isolation Forest
+		    </th>
+		    <td>Anomaly Detection with Isolation Forest & Visualization<br> 
+			<a href="https://towardsdatascience.com/anomaly-detection-with-isolation-forest-visualization-23cd75c281e2">Link</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>Anomaly Detection with Isolation Forest (KR)<br>
+		        <a href="https://medium.com/@john_analyst/isolation-forest%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%9D%B4%EC%83%81%ED%83%90%EC%A7%80-%EB%AA%A8%EB%8D%B8-9b10b43eb4ac">Link</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>scikit-learn's isolation forest algorithm: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html">Link</a>
+			    <br>
+			 <a href="https://blog.paperspace.com/anomaly-detection-isolation-forest/">Blog post</a>
+			    <br>
+			 <a href="https://github.com/MahdiSMIDA/ISOLATION-FOREST-NOTEBOOK/blob/master/ISOLATION%20FOREST%20ALGORITHM%20FOR%20PIEZO%20DATA.ipynb">Example use of the library</a>
+		    </td>
+		  </tr>
+		</table>
+	
+		<p></p>
+
+		<table class="alg_table">
+		  <tr>
+	            <th rowspan="4">Gaussian Process
+		    </th>
+		    <td>What is Gaussian Process (KR)<br>
+		      <a href="https://enginius.tistory.com/317">Blog post</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>Gaussian Process Regression (KR)<br>
+			<a href="https://hellbell.tistory.com/entry/Gaussian-Process">Blog post</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>What is Q-Function (KR)<br>
+			<a href="http://www.ktword.co.kr/abbr_view.php?m_temp1=4376">Blog post</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>Gaussian Process를 통한 Neural Network의 유도<br>
+		    <a href="https://parkgeonyeong.github.io/Gaussian-Process%EB%A5%BC-%ED%86%B5%ED%95%9C-Bayesian-Neural-Network%EC%9D%98-%EC%9C%A0%EB%8F%84;-Dropout%EC%9D%80-%EC%A0%95%EB%A7%90-bayesian-approximation%EC%9D%B8%EA%B0%80-%EC%A0%95%EB%A6%AC/">Blog post</a>
+		    </td>
+		  </tr>
+
+		</table>
+		
+		<p></p>
+
+		<table class="alg_table">
+		  <tr>
+		    <th>Seasonal Hybrid Extreme Studentized Deviate <br>
+			    (S-H-ESD)
+		    </th>
+		    <td>
+		    Runthrough: <a href="https://h3imdallr.github.io/2017-06-20/anomaly_detection/">Link</a><br>
+		    Example: <a href="https://github.com/callmeashish/Anomaly-Detection-SH-ESD">Link</a>
+		    </td>
+		  </tr>
+		</table>
+
+		<p></p>
+
+		<table class="alg_table">
+		  <tr>
+	 	    <th>Peak-Over-Threshold
+		    </th>
+		    <td>Anomaly Detection in Streams with Extreme Value Theory
+			    <br>
+			<a href="https://hal.archives-ouvertes.fr/hal-01640325/document">PDF</a>
+		    </td>
+		  </tr>
+		</table>	
+		</div>
+		
+		<div class="column">
+		<h2>Pre-built Tools</h2>
+		
+		<h3>Lists</h3>
+		<p>
+		<a href="https://github.com/rob-med/awesome-TS-anomaly-detection">This Github repository</a> summarizes list of softwares that are developed for anomaly detection.
+		</p>
+		<p>More information about already-established tools can be found <a href="https://www.predictiveanalyticstoday.com/top-anomaly-detection-software/">here</a>
+		</p>
+
+		<h3>Anomaly Detection Tools</h3>
+		<table class="tool_table">
+		  <tr>
+		    <th>Luminol <br> (LinkedIn Anomaly Detection)</th>
+		    <td><a href="https://github.com/linkedin/luminol">Github Link</a></td>
+		  </tr>
+
+		  <tr>
+		    <th>Twitter Anomaly Detection <br> (Basis Algorithm: S-H-ESD)</th>
+		    <td>
+	 	    Original R package: <a href="https://github.com/twitter/AnomalyDetection">Link</a><br>
+		    Python port of the R package: <a href="https://github.com/zrnsm/pyculiarity">Link</a> (with no R dependency: <a href="https://github.com/wdm0006/pyculiarity">Link</a>)<br>
+		    Paper <a href="https://www.usenix.org/system/files/conference/hotcloud14/hotcloud14-vallis.pdf">Link</a>
+		    </td>
+		  </tr>
+		</table>
+		
+		<h3>Time-Series Forecasting Tools</h3>
+		
+		<table class="tool_table">
+		  <tr>
+		    <th>Facebook Prophet</th>
+		    <td>
+		    Documentation: <a href="https://facebook.github.io/prophet/">Link</a><br>
+		    Demonstration: <a href="https://www.kaggle.com/vinayjaju/anomaly-detection-using-facebook-s-prophet">Link</a>
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <th>GluonTS</th>
+		    <td>
+		    GluonTS Introduction: <a href="https://aws.amazon.com/ko/blogs/opensource/gluon-time-series-open-source-time-series-modeling-toolkit/">Link</a><br>
+		    API: <a href="https://gluon-ts.mxnet.io/">Link</a><br>
+       		    Paper <a href="https://arxiv.org/abs/1906.05264">Link</a>
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <th>DONUT</th>
+		    <td> 
+		    Github <a href="https://github.com/NetManAIOps/donut">Link</a><br>
+		    Paper <a href="https://arxiv.org/abs/1802.03903">Link</a>
+		    </td>
+		  </tr>
+		</table>
+		</div>
+		</div>
+	</body>
+</html>

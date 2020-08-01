@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<title>Anomaly Detection Study Sources</title>
+		<link rel="stylesheet" type="text/css" href="styles/page_style.css">
+	</head>
+
+	<body>
+		<h1>Anomaly Detection Documentation for July 2020 Solbox Inc. Intern</h1>
+		
+		<!--https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
+		<div class="navbar">
+		  <a href="index.html">Home</a>
+		  <a href="alg.html">Algorithms</a>
+
+		  <!--
+		  <div class="dropdown">
+		    <button class="dropbtn">Statistical Models
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div class="dropdown-content">
+		      <a href="sarima.html">SARIMA</a>
+		      <a href="kf.html">Kalman Filter</a>
+		    </div>
+		  </div>
+		  -->
+
+		  <a href="other_alg.html">Other Algorithms</a>
+
+		  <!--
+		  <div class="dropdown">
+		    <button class="dropbtn">Other Algorithms
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+
+		    <div class="dropdown-content">
+			    <a href="#">A1</a>
+			    <a href="#">A2</a>
+		    </div>
+		  </div>
+		  -->
+                  
+		  <a href="papers.html">Papers</a>
+		  <a href="ppt.html">Presentation</a>
+
+		</div>
+		<div class="row">
+		<div class="column">
+		<h2>Statistical Methods that can be used for Anomaly Detection</h2>
+		
+		<p>
+		Though statistic models are easy to learn, the parameter tuning often requires specific domain knowledge and choosing specific residual error models for each dataset.
+		</p>
+
+		<h3>Seasonal AutoRegressive Integrated Moving Average (SARIMA)</h3>
+		<ul>
+		  <li>General runthrough of AR, MA, ARIMA, SARIMA (KR)<br>
+			  Blog <a href="http://blog.naver.com/PostView.nhn?blogId=fininsight&logNo=221516817114&parentCategoryNo=&categoryNo=28&viewDate=&isShowPopularPosts=true&from=search">Link</a>
+		  </li>
+
+		  <li>Time Series Forecasting with a SARIMA model<br>
+		        https://towardsdatascience.com/time-series-forecasting-with-a-sarima-model-db051b7ae459
+		  </li>
+		  <li>Introduction to SARIMA in Python<br>
+        https://machinelearningmastery.com/sarima-for-time-series-forecasting-in-python/</li>
+		  <li>Understanding SARIMA<br>
+		        https://towardsdatascience.com/understanding-sarima-955fe217bc77
+		  </li>
+
+		  <li>시계열 계절성 ARIMA 모형<br>
+		      https://m.blog.naver.com/PostView.nhn?blogId=leerider&logNo=220206942342&proxyReferer=https:%2F%2Fwww.google.com%2F
+		  </li>
+		
+		  <li>API for R's auto.arima module in Python<br>
+		      http://alkaline-ml.com/pmdarima/setup.html#setup
+		  </li>
+		  <li>Example use of above API:<br>
+		      https://towardsdatascience.com/time-series-forecasting-using-auto-arima-in-python-bb83e49210cd
+		  </li>
+		</ul>
+		
+		<ul>
+		  <li>Statsmodels API (check stable models too) <br>
+        	      https://www.statsmodels.org/stable/generated/statsmodels.tsa.statespace.sarimax.SARIMAX.html
+		  </li>
+
+		  <li>SARIMA using statsmodel module in Python <br>
+		      https://barnesanalytics.com/sarima-models-using-statsmodels-in-python</li>
+		  <li>How to choose best SARIMA parameter in R<br>
+			  https://malouche.github.io/howto/sarima.html</li>
+		  
+		  
+		  <li>Introduction to ACF, PACF<br>
+			  https://machinelearningmastery.com/gentle-introduction-autocorrelation-partial-autocorrelation/</li>
+		  <li>SARIMA order derivation from ACF/PACF (not too definitive)<br>
+        https://stats.stackexchange.com/questions/349622/sarima-order-from-acf-and-pacf</li>
+		  <li>SARIMA order derivation (same as above)<br>
+			  https://stats.stackexchange.com/questions/385657/determine-paramaters-for-sarima-model</li>
+
+		</ul>
+		
+		
+		<ul>
+		  <li>Anomaly Detection implementation using SARIMA<br>
+			  https://github.com/RuoyunCarina-D/Anomly-Detection-SARIMA</li>
+		  <li>SARIMA 모형추정<br>
+			  https://datascienceschool.net/view-notebook/8c4f6ad9487149ca872374bbbf098e5f/</li> 
+		  
+		  <li>https://medium.com/@sakamoto2000.kim/comparison-in-the-multilayer-perceptron-models-mlp-lstm-and-xgboost-in-the-random-array-2b0101578572</li>		  
+		  
+		  <li>https://www.statsmodels.org/dev/generated/statsmodels.graphics.tsaplots.plot_acf.html</li>
+		  <li>ARIMA models for Time Series Forecasting (explore)<br>
+        https://people.duke.edu/~rnau/arimrule.htm
+		  </li>
+		</ul>
+		
+		<ul>		  
+		  <li>https://www.seanabu.com/2016/03/22/time-series-seasonal-ARIMA-model-in-python/</li>
+		  <li>https://machinelearningmastery.com/how-to-grid-search-sarima-model-hyperparameters-for-time-series-forecasting-in-python/</li>
+		  <li>https://medium.com/@josemarcialportilla/using-python-and-auto-arima-to-forecast-seasonal-time-series-90877adff03c</li>
+		  <li>https://www.datasciencecentral.com/profiles/blogs/tutorial-forecasting-with-seasonal-arima</li> 
+		</ul>	
+		
+		<h3>Kalman Filter</h3>
+		<p>
+		https://towardsdatascience.com/time-series-forecasting-with-splunk-part-i-intro-kalman-filter-46e4bff1abff<br>
+		https://medium.com/blogyuxiglobal/kalman-filter-the-way-to-remove-outliers-bb6aa616788e<br>
+		https://www.usenix.org/legacy/event/imc05/tech/full_papers/soule/soule.pdf<br>
+		Extended Kalman Filter<br>
+		http://users.isr.ist.utl.pt/~mir/pub/kalman.pdf<br>
+		https://stanford.edu/class/ee363/lectures/ekf.pdf<br>
+		https://en.wikipedia.org/wiki/Extended_Kalman_filter<br>
+		https://www.cse.sc.edu/~terejanu/files/tutorialEKF.pdf<br>
+		http://jinyongjeong.github.io/2017/02/14/lec03_kalman_filter_and_EKF/<br>
+		</p>
+		
+	
+		<h3>Comparisons with other methods</h3>
+		<table>
+		  <tr>
+		    <th>Comparing Method</th>
+		    <th>Article Link</th>
+		  </tr>
+
+		  <tr>
+		    <td>ARIMA vs Auto-Arima</td>
+		    <td><a href="https://medium.com/analytics-vidhya/time-series-forecasting-sarima-vs-auto-arima-models-f95e76d71d8f">Link</a>
+		  </tr>
+
+		  <tr>
+		    <td>ARIMA vs FBProphet vs GluonTS</td>
+		    <td><a href="https://medium.com/@sakamoto2000.kim/forecast-arima-gluonts-and-fbprophet-methods-on-the-same-stage-f62d55acc5bb">Link</a>
+		  </tr>
+
+		  <tr>
+		    <td>ARIMA vs LSTM</td>
+		    <td><a href="https://towardsdatascience.com/anomaly-detection-with-time-series-forecasting-c34c6d04b24a">Link</a>
+		  </tr>
+		</table>
+		</div>
+
+		<div class="column">
+		<h2>Deep Learning / Neural Network models that can be used for Anomaly Detection</h2>
+	
+		<h3>Deep Learning for Anomaly Detection: A Survey</h3>
+		<p>
+		<a href="https://arxiv.org/pdf/1901.03407.pdf">This survey paper</a> goes over different types of anomaly scemes, as well as different deep-learning-based state-of-the-art anomaly detection methods. 
+		</p>
+		
+		<p>
+		For an interactive deep learning book, check out the book <em>Dive into Deep Learning</em> (<a href="https://d2l.ai/index.html">Link</a>)
+		</p>
+		<table>
+		  <tr>
+		    <td>Deep Learning Introduction<br> (talks about RBM, DBN, CNN)
+		    </td>
+		    <td colspan="3">Blog <a href="http://sanghyukchun.github.io/75/">link</a> (KR)
+		    </td>
+		  </tr>
+		  <tr>
+		    <th rowspan="3">Recurrent Neural Network (RNN)</th>
+		    <td rowspan="3">
+		      순환신경망
+		      <br>
+		      <a href="https://excelsior-cjh.tistory.com/183">Blog post</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <th>Long Short-Term Memory (LSTM)
+		    </th>
+		    <td>LSTM Autoencoder for Anomaly Detection
+			<br>
+			<a href="https://towardsdatascience.com/lstm-autoencoder-for-anomaly-detection-e1f4f2ee7ccf">Link</a>
+			<br>
+			(Uses Tensorflow and Keras)
+		    </td>
+		  </tr>
+		  <tr>
+		    <th>Gated Recurrent Unit (GRU)
+		    </th>
+		    <td>What is GRU (KR)
+			<br>
+			<a href="https://wikidocs.net/22889">Link</a>
+			<br>
+			Understanding GRU Networks
+			<br>
+			<a href="https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be">Blog post</a>
+		    </td>
+		  </tr>
+		  <tr>
+		    <th>Variational AutoEncoder (VAE)
+		    </th>
+		    <td colspan="3">
+		    In Korean: <a href="https://ratsgo.github.io/generative%20model/2018/01/27/VAE/">Blog post</a>
+		    </td>
+		  </tr>
+		</table>
+		
+		<p>
+		</p>
+
+		<h3>Implementation Example</h3>
+		<p>
+		Implementation of RNN, LSTM, and GRU using Keras<br>
+		https://towardsdatascience.com/implementation-of-rnn-lstm-and-gru-a4250bf6c090<br>
+
+		Time Series Prediction with LSTM Recurrent Neural Networks in Python with Keras<br>
+		https://uni2u.tistory.com/88<br>
+
+		Building a RNN to predict time-series data with Keras in Python<br>
+		https://gweissman.github.io/post/building-a-recurrent-neural-network-to-predict-time-series-data-with-keras-in-python/<br>
+		
+		[Implementing Neural Network from Scratch]<br>
+		https://github.com/dennybritz/nn-from-scratch<br>
+		
+		[Bayesian NNs using Pyro and PyTorch]<br>
+		https://towardsdatascience.com/making-your-neural-network-say-i-dont-know-bayesian-nns-using-pyro-and-pytorch-b1c24e6ab8cd<br>
+
+		[How to build your own Neural Network from scratch in Python]<br>
+		https://towardsdatascience.com/how-to-build-your-own-neural-network-from-scratch-in-python-68998a08e4f6<br>
+
+		[AD in Time-Series using MXNet and NAB data]<br>
+		https://github.com/Lohika-Labs/time-series-anomaly-detection/blob/master/anomaly_AWS.ipynb<br>
+
+		[RNN Tutorial 4 – GRU/LSTM RNN 구조를 python 과 Theano 를 이용하여 구하기]<br>
+		https://aikorea.org/blog/rnn-tutorial-4/<br>
+
+		Technical Indicators and GRU/LSTM to Predict Stock price<br>
+		https://towardsdatascience.com/forecasting-with-technical-indicators-and-gru-lstm-rnn-multivariate-time-series-a3244dcbc38b<br>
+
+		Learn by example RNN/LSTM/GRU time series<br>
+		https://www.kaggle.com/charel/learn-by-example-rnn-lstm-gru-time-series<br>
+ 		</p>
+		</div>
+		</div>
+
+	</body>
+</html>
